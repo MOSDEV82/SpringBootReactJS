@@ -125,7 +125,55 @@ The default configuration uses MariaDB. To configure your database:
 
 Run both the backend and frontend as described in the setup instructions. The frontend will proxy API requests to the backend.
 
+### Building with Different Profiles
+
+The application supports three different build profiles: `dev`, `test`, and `prod`. Each profile generates a WAR file with a specific naming pattern: `template-{profile}.war`.
+
+1. Build with the development profile (default):
+   ```bash
+   cd backend
+   ./mvnw clean package
+   # or explicitly specify the profile
+   ./mvnw clean package -P dev
+   ```
+   This will generate `template-dev.war`
+
+2. Build with the test profile:
+   ```bash
+   cd backend
+   ./mvnw clean package -P test
+   ```
+   This will generate `template-test.war`
+
+3. Build with the production profile:
+   ```bash
+   cd backend
+   ./mvnw clean package -P prod
+   ```
+   This will generate `template-prod.war`
+
 ### Production Build
+
+The project is configured to automatically build the frontend and include it in the backend WAR file during the Maven build process. The frontend-maven-plugin will:
+1. Install Node.js and npm if needed
+2. Install frontend dependencies
+3. Run the frontend build process (executing `npm run build` in the frontend directory)
+4. Copy the built frontend files to the appropriate location in the WAR file
+
+To build the complete application:
+
+1. Build the backend with the desired profile (which will automatically build the frontend):
+   ```bash
+   cd backend
+   ./mvnw clean package -P prod
+   ```
+
+2. Run the packaged application:
+   ```bash
+   java -jar target/template-prod.war
+   ```
+
+If you prefer to build the frontend manually:
 
 1. Build the frontend:
    ```bash
@@ -135,18 +183,7 @@ Run both the backend and frontend as described in the setup instructions. The fr
    yarn build
    ```
 
-2. Copy the contents of the `frontend/dist` directory to the `backend/src/main/resources/static` directory.
-
-3. Build the backend:
-   ```bash
-   cd backend
-   ./mvnw clean package
-   ```
-
-4. Run the packaged application:
-   ```bash
-   java -jar target/backend-0.0.1-SNAPSHOT.war
-   ```
+2. The Maven build will still copy the frontend build output to the WAR file when you build the backend.
 
 ## API Documentation
 

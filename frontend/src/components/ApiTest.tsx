@@ -121,9 +121,9 @@ const ApiTest: React.FC = () => {
             <h3>Response:</h3>
             <pre>{JSON.stringify(metadataResponse, null, 2)}</pre>
             <h3>Extracted Metadata:</h3>
-            <p>Version: {getMetadata(metadataResponse, 'version')}</p>
-            <p>Server: {getMetadata(metadataResponse, 'server')}</p>
-            <p>Timestamp: {getMetadata(metadataResponse, 'timestamp')}</p>
+            <p>Version: {String(getMetadata(metadataResponse, 'version') || '')}</p>
+            <p>Server: {String(getMetadata(metadataResponse, 'server') || '')}</p>
+            <p>Timestamp: {String(getMetadata(metadataResponse, 'timestamp') || '')}</p>
           </div>
         )}
       </div>

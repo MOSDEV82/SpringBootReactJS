@@ -44,7 +44,8 @@ export interface ApiResponse<T> {
  */
 export function isApiResponse<T>(response: unknown): response is ApiResponse<T> {
   return (
-    response &&
+    response !== null &&
+    response !== undefined &&
     typeof response === 'object' &&
     'code' in response &&
     'method' in response &&
