@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bc514d1f-88c5-4f49-84e7-a9abc5683e0d" name="Changes" comment="Add environment-specific configurations and security setup&#10;&#10;Introduce separate configuration files for dev, test, and prod environments to streamline environment-specific settings. Add a security configuration class with in-memory user roles and customize HTTP security. Update backend to support Swagger UI and proxy settings for frontend development.">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="bc514d1f-88c5-4f49-84e7-a9abc5683e0d" name="Changes" comment="Add OpenAPI config and CORS setup&#10;&#10;Introduce OpenAPI configuration for API documentation and enable CORS support in the security configuration. Updated dependencies for SpringDoc and refined Swagger paths to align with the new setup.">
+      <change afterPath="$PROJECT_DIR$/frontend/public/idea.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/frontend/public/spring-boot.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/java/org/mosdev/template/backend/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/mosdev/template/backend/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +34,9 @@
   &quot;associatedIndex&quot;: 1
 }</component>
   <component name="ProjectId" id="2wRacw9EWLBRIIYf5uazuf5nK0g" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -65,6 +67,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/frontend/public" />
+    </key>
+  </component>
   <component name="RunManager" selected="Spring Boot.Backend">
     <configuration name="Backend" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
@@ -105,7 +112,7 @@
       <option name="presentableId" value="Default" />
       <updated>1746006924522</updated>
       <workItem from="1746006925576" duration="4063000" />
-      <workItem from="1746044509265" duration="1164000" />
+      <workItem from="1746044509265" duration="2221000" />
     </task>
     <task id="LOCAL-00001" summary="Initialize project with backend and frontend setups&#10;&#10;Set up a Spring Boot backend and a Vite + React TypeScript frontend. Included essential configuration files, .gitignore rules, Maven Wrapper for backend, and ESLint for the frontend. Introduced basic application structure and styling for both projects.">
       <option name="closed" value="true" />
@@ -131,7 +138,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746011749137</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add OpenAPI config and CORS setup&#10;&#10;Introduce OpenAPI configuration for API documentation and enable CORS support in the security configuration. Updated dependencies for SpringDoc and refined Swagger paths to align with the new setup.">
+      <option name="closed" value="true" />
+      <created>1746046074805</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1746046074805</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -141,6 +156,7 @@
     <MESSAGE value="Initialize project with backend and frontend setups&#10;&#10;Set up a Spring Boot backend and a Vite + React TypeScript frontend. Included essential configuration files, .gitignore rules, Maven Wrapper for backend, and ESLint for the frontend. Introduced basic application structure and styling for both projects." />
     <MESSAGE value="Add IntelliJ workspace configuration and backend HELP.md&#10;&#10;This commit introduces a new `.idea/workspace.xml` file for IntelliJ IDE settings and a `HELP.md` file in the backend directory. The `HELP.md` provides a quick-start guide and useful references for Maven, Spring Boot, and common development tasks." />
     <MESSAGE value="Add environment-specific configurations and security setup&#10;&#10;Introduce separate configuration files for dev, test, and prod environments to streamline environment-specific settings. Add a security configuration class with in-memory user roles and customize HTTP security. Update backend to support Swagger UI and proxy settings for frontend development." />
-    <option name="LAST_COMMIT_MESSAGE" value="Add environment-specific configurations and security setup&#10;&#10;Introduce separate configuration files for dev, test, and prod environments to streamline environment-specific settings. Add a security configuration class with in-memory user roles and customize HTTP security. Update backend to support Swagger UI and proxy settings for frontend development." />
+    <MESSAGE value="Add OpenAPI config and CORS setup&#10;&#10;Introduce OpenAPI configuration for API documentation and enable CORS support in the security configuration. Updated dependencies for SpringDoc and refined Swagger paths to align with the new setup." />
+    <option name="LAST_COMMIT_MESSAGE" value="Add OpenAPI config and CORS setup&#10;&#10;Introduce OpenAPI configuration for API documentation and enable CORS support in the security configuration. Updated dependencies for SpringDoc and refined Swagger paths to align with the new setup." />
   </component>
 </project>
