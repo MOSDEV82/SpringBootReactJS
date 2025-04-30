@@ -1,10 +1,12 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useState } from 'react';
+import reactLogo from './assets/react.svg';
+import viteLogo from '/vite.svg';
+import './App.css';
+import ApiTest from './components/ApiTest';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
+  const [showApiTest, setShowApiTest] = useState(false);
 
   return (
     <>
@@ -16,20 +18,28 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>Vite + React</h1>
+      <h1>Spring Boot + React + ApiResponse Demo</h1>
+
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
+        <button onClick={() => setShowApiTest(!showApiTest)}>
+          {showApiTest ? 'Hide API Test' : 'Show API Test'}
+        </button>
+        <button onClick={() => setCount((count) => count + 1)} style={{ marginLeft: '10px' }}>
           count is {count}
         </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
       </div>
+
+      {showApiTest && (
+        <div className="api-test-container">
+          <ApiTest />
+        </div>
+      )}
+
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

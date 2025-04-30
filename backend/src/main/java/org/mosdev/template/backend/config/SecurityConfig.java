@@ -22,11 +22,9 @@ public class SecurityConfig {
         http
             .csrf(csrf -> csrf.disable())
             .authorizeHttpRequests(authorize -> authorize
-                // API endpoints require authentication
-                .requestMatchers("/api/**").authenticated()
-                // Swagger UI is only accessible to DEVELOPER role
+                // Swagger UI and API docs are only accessible to DEVELOPER role
                 .requestMatchers("/swagger-ui/**", "/api/api-docs/**").hasRole("DEVELOPER")
-                // All other paths are permitted for React routing
+                // All other paths are permitted (including API endpoints)
                 .anyRequest().permitAll()
             )
             .formLogin(form -> form
@@ -35,7 +33,7 @@ public class SecurityConfig {
             .logout(logout -> logout
                 .permitAll()
             );
-        
+
         return http.build();
     }
 
