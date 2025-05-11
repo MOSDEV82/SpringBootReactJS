@@ -125,6 +125,10 @@ The default configuration uses MariaDB. To configure your database:
 
 Run both the backend and frontend as described in the setup instructions. The frontend will proxy API requests to the backend.
 
+### Deployment with NGINX
+
+When deploying the application in a production environment with Tomcat and NGINX, you may encounter issues with context paths and static resources. For detailed instructions on configuring NGINX to properly handle these issues, see [NGINX_CONFIG.md](NGINX_CONFIG.md).
+
 ### Building with Different Profiles
 
 The application supports three different build profiles: `dev`, `test`, and `prod`. Each profile generates a WAR file with a specific naming pattern: `template-{profile}.war`.
