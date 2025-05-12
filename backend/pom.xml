@@ -29,23 +29,22 @@
     </scm>
     <properties>
         <java.version>21</java.version>
+        <app.context-path>/</app.context-path>
     </properties>
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
+<!--
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-rest</artifactId>
         </dependency>
+-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.session</groupId>
@@ -192,7 +191,9 @@
                             <goal>copy-resources</goal>
                         </goals>
                         <configuration>
-                            <outputDirectory>${project.build.directory}/${project.build.finalName}/WEB-INF/classes/static</outputDirectory>
+                            <outputDirectory>
+                                ${project.build.directory}/${project.build.finalName}/WEB-INF/classes/static
+                            </outputDirectory>
                             <resources>
                                 <resource>
                                     <directory>../frontend/dist</directory>
